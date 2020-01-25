@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -9,6 +10,13 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist',
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      inject: false,
+      template: 'index.html',
+      scriptSrc: 'app.js', // how i can get current filename like output section
+    }),
+  ],
   module: {
     rules: [
       {
