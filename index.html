@@ -1,24 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="keywords" content="Some, SEO, Tags" />
-    <meta name="description" content="A description of the page" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="theme-color" content="#ffffff" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff" />
-    <meta name="msapplication-navbutton-color" content="#ffffff" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="icon" href="img/favicon.png" type="image/png" />
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-    <title>Template</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
   </head>
+  <style>
+    html {
+      min-height: 100vh;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: sans-serif;
+      font-size: 16px;
+      color: #fff;
+      background-color: #282c34;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      margin: 0;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    input,
+    button,
+    textarea,
+    input::placeholder,
+    textarea::placeholder {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+    }
+
+    button {
+      color: #000;
+    }
+
+    input {
+      color: #000;
+    }
+
+    form > div {
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
   <body>
-    <button type="button" id="load-files">load</button>
-    <script src="js/js.js"></script>
+    <form method="post" enctype="multipart/form-data" id="files-form">
+      <div>
+        <label for="file">Choose file to upload</label>
+        <input value="Assassin's Creed II" type="text" id="prefix" />
+        <input value="_1" type="text" id="postfix" />
+        <input type="file" id="file" name="file" multiple />
+      </div>
+      <div>
+        <button>Submit</button>
+      </div>
+    </form>
   </body>
+  <script src="dist/app.js"></script>
 </html>
